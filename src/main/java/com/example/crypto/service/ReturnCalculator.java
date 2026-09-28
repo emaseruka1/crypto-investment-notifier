@@ -46,7 +46,7 @@ public class ReturnCalculator {
 
         BigDecimal portfolioReturnValue =
                 portfolioValue
-                        .divide(initialInvestment, 10, RoundingMode.HALF_UP)
+                        .divide(entryEthPrice, 10, RoundingMode.HALF_UP)
                         .subtract(BigDecimal.ONE)
                         .multiply(new BigDecimal("100"))
                         .setScale(2, RoundingMode.HALF_UP);
