@@ -1,0 +1,16 @@
+binance:
+  key: ${binance_key}
+  secret: ${binance_secret}
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: b1810079@gl.aiu.ac.jp
+    password: ${smtp_password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
