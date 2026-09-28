@@ -53,7 +53,7 @@ public class EmailNotification {
                 .setScale(2, RoundingMode.HALF_UP);
 
         String[] receivers = {
-                "emmamaseruka97@gmail.com"
+                "emmamaseruka97@gmail.com","kevinmeng0716@gmail.com","deborahmawanda@gmail.com"
         };
 
         String body = """
