@@ -18,13 +18,6 @@ public class CryptoInvestmentNotifier {
         SpringApplication.run(CryptoInvestmentNotifier.class, args);
     }
 
-    @Bean
-    CommandLineRunner run(EmailNotification emailNotification) {
-        return args -> {
-            emailNotification.sendWeeklyUpdate();
-            System.out.println("Email sent successfully");
-        };
-    }
 }
 
 
