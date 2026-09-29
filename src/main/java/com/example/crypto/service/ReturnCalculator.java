@@ -16,6 +16,7 @@ public class ReturnCalculator {
 
     BigDecimal initialInvestment = new BigDecimal("2286.93493");
     BigDecimal entryEthPrice = new BigDecimal("3722.49");
+    BigDecimal guvnorSaccoEth = new BigDecimal("0.1409589");
 
     public ReturnCalculator(
             BinanceDataFetcher binanceDataFetcher,
@@ -39,14 +40,14 @@ public class ReturnCalculator {
 
         BigDecimal portfolioValue =
                 balances.get("ETH")
+                        .subtract(guvnorSaccoEth)
                         .multiply(ethPriceToday)
-                        .subtract(new BigDecimal("301.09329"))
                         .add(balances.get("USDT"));
 
 
         BigDecimal portfolioReturnValue =
                 portfolioValue
-                        .divide(entryEthPrice, 10, RoundingMode.HALF_UP)
+                        .divide(initialInvestment, 10, RoundingMode.HALF_UP)
                         .subtract(BigDecimal.ONE)
                         .multiply(new BigDecimal("100"))
                         .setScale(2, RoundingMode.HALF_UP);
